@@ -8,7 +8,7 @@ class User(AbstractUser, BaseModel):
         ADMIN = "admin", "Administrator"
         TEACHER = "teacher", "Guru"
         STUDENT = "student", "Pelajar"
-    role = models.CharField(choices=RoleChoice.choices, default=RoleChoice.STUDENT)
+    role = models.CharField(max_length=10, choices=RoleChoice.choices, default=RoleChoice.STUDENT)
 
 
 class Profile(BaseModel):
