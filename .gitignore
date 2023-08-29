@@ -1,0 +1,8 @@
+.idea
+.vscode
+acasim/local_settings.py
+media/*
+static/*
+**.DS_Store
+**.pyc
+acasim/__pycache__
