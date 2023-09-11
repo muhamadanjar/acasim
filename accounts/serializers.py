@@ -1,4 +1,4 @@
-from accounts.models import User
+from accounts.models import User, Profile
 from django.contrib.auth.models import Group
 from rest_framework import serializers
 
@@ -14,3 +14,11 @@ class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
         fields = ("name", )
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+    user = UserSerializer
+
+    class Meta:
+        model = Profile
+        fields = ("user", )
